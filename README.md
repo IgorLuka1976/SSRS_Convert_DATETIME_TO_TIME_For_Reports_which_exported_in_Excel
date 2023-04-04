@@ -6,10 +6,19 @@ Problem description:
 https://docs.google.com/document/d/1FcjFunIpC6sVezLXWtgOK0wx6j4AQGVViAEuS6rz7ow/edit?usp=sharing
 
 Solution:
-We use expression in SSRS for datetime column 'datetimecolumn':
+1.We need to convert datetime column to the seconds in INT format.
+Change script in dataset:
+change:’,ModifiedDate AS Date’
+to
+,’DATEDIFF(SECOND, CONVERT(date, ModifiedDate), ModifiedDate) AS Date’
 
-'=DateAdd(DateInterval.Day, -1, CDATE(DateTime.ParseExact("1/1/1900 " & (TimeSpan.FromSeconds(Fields!datetimecolumn.Value).ToString()),"d/M/yyyy HH:mm:ss", System.Globalization.CultureInfo.InvariantCulture)))'
+2. We use expression in SSRS for datetime column 'datetimecolumn':
+
+'=DateAdd(DateInterval.Day, -1, CDATE(DateTime.ParseExact("1/1/1900 " & (TimeSpan.FromSeconds(Fields!Date.Value).ToString()),"d/M/yyyy HH:mm:ss", System.Globalization.CultureInfo.InvariantCulture)))'
 and than set TIME format for this column:
 
+Now, run again and It's ok!
+Solution:
+https://docs.google.com/document/d/1mvVR76jQdEnWwySmO-UGrLvxz6EsKxD930cHFZjth-0/edit?usp=sharing
 
 
