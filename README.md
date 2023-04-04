@@ -9,5 +9,7 @@ Solution:
 We use expression in SSRS for datetime column 'datetimecolumn':
 
 '=DateAdd(DateInterval.Day, -1, CDATE(DateTime.ParseExact("1/1/1900 " & (TimeSpan.FromSeconds(Fields!datetimecolumn.Value).ToString()),"d/M/yyyy HH:mm:ss", System.Globalization.CultureInfo.InvariantCulture)))'
+and than set TIME format for this column:
+
 
 
