@@ -1,6 +1,10 @@
 # SSRS_Convert_DATETIME_TO_TIME_For_Reports_which_saved_in_Excel
 SSRS Use Date In Time format (YYYY-MM-DD HH:mm:ss convert to HH:mm:ss), when report save in Excel
 
+Important!
+1. The input data for displaying the Time format should be seconds!
+2. The option described below is suitable for the case if no more than 86400 seconds or no more than 24 hours!
+-----------------===============For case no more 24 hours
 First, design a simple report with datetime columns.
 Problem description:
 https://docs.google.com/document/d/1FcjFunIpC6sVezLXWtgOK0wx6j4AQGVViAEuS6rz7ow/edit?usp=sharing
@@ -20,5 +24,5 @@ and than set TIME format for this column:
 Now, run again and It's ok!
 Solution:
 https://docs.google.com/document/d/1mvVR76jQdEnWwySmO-UGrLvxz6EsKxD930cHFZjth-0/edit?usp=sharing
-
+----------------=============================================================================
 
