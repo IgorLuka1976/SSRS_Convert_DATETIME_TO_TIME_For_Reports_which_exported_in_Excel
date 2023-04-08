@@ -1,0 +1,11 @@
+Public Function ConvertSecondsToHourMinSec(ByVal intTotalSeconds) As String
+    Dim hours As String =INT(intTotalSeconds/3600)
+    If Len(hours) < 2 Then
+        hours = RIGHT(("0" & hours), 2)
+    End If
+    Dim mins As String = RIGHT("0" & INT((intTotalSeconds MOD 3600)/60), 2)
+    Dim secs AS String = RIGHT("0" & ((intTotalSeconds MOD 3600) MOD 60), 2)
+
+    ConvertSecondsToHourMinSec = hours & ":" & mins & ":" & secs
+
+End Function
