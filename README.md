@@ -26,3 +26,9 @@ Solution:
 https://docs.google.com/document/d/1mvVR76jQdEnWwySmO-UGrLvxz6EsKxD930cHFZjth-0/edit?usp=sharing
 ----------------=============================================================================
 
+For Case where is greater than or equal 86400 seconds or 24 hours
+, but Time Format will turn out to be a String Format !
+
+Description:
+https://docs.google.com/document/d/1mEnP3v5_GPT_WkcQXTU9S_P6BWSgrl218ISZxujqOcY/edit?usp=sharing
+
