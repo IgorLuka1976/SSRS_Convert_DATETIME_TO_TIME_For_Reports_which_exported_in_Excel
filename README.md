@@ -35,7 +35,7 @@ or :
 Description:
 https://docs.google.com/document/d/1mEnP3v5_GPT_WkcQXTU9S_P6BWSgrl218ISZxujqOcY/edit?usp=sharing
 
-New solution! :For Case where is greater than or equal 86400 seconds or 24 hours
+The New solution! For Case where is greater than or equal 86400 seconds or 24 hours
 
 =DateTime.ParseExact((IIf(Floor(Fields!ShiftDuration.Value / 86400)<1 ,"31/12/1899 ",IIf(Floor(Fields!ShiftDuration.Value / 86400)>=1 AND Floor(Fields!ShiftDuration.Value / 86400)<32 ,Format(Floor(Fields!ShiftDuration.Value / 86400))+"/1/1900 ",Format(Floor(Fields!ShiftDuration.Value / 86400)-31)+"/2/1900 "))) & (Format(DateAdd("s", Fields!ShiftDuration.Value, TimeValue("00:00:00")), "HH:mm:ss")),"d/M/yyyy HH:mm:ss", System.Globalization.CultureInfo.InvariantCulture)
 
